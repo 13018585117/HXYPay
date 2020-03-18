@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="上传身份证照片"
+                android:textColor="@color/text_333333_color"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/id_font_img"
+                        android:layout_width="170dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/idcard_obverse"
+                        android:scaleType="fitCenter" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/id_back_img"
+                        android:layout_width="170dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/idcard_reverse"
+                        android:scaleType="fitCenter" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="上传手持身份证照片"
+                android:textColor="@color/text_333333_color"
+                android:textSize="14sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/hand_img"
+                        android:layout_width="170dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/hand"
+                        android:scaleType="fitXY" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/idcard_reverse"
+                        android:scaleType="fitCenter" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="上传银行卡照片"
+                android:textColor="@color/text_333333_color"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/bank_img"
+                        android:layout_width="170dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/bankcard"
+                        android:scaleType="fitCenter" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/idcard_reverse"
+                        android:scaleType="fitCenter" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_com"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/corner_btn_login_selector"
+                android:text="下一步"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

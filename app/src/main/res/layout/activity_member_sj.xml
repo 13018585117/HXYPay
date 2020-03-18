@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_layout_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/icon_sjlogo" />
+
+                <TextView
+                    android:id="@+id/money_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="588.00"
+                    android:textColor="#222222"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自用省钱，推广赚钱"
+                    android:textColor="#555555"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView style="@style/line_horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/wechat_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_layout_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/wechatpay" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="微信支付"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/wechat_check_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/check_n" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/line_horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp" />
+
+                <LinearLayout
+                    android:id="@+id/alipay_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_layout_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/alipay" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="支付宝支付"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/alipay_check_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/check_n" />
+
+                </LinearLayout>
+
+                <TextView style="@style/line_horizontal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="35dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="说明："
+                    android:textColor="#555555"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/desc1_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=".开通会员后即可永久享受会员协议"
+                    android:textColor="#555555"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/desc2_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=".会员一经开通不支持退款"
+                    android:textColor="#555555"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_com"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/corner_btn_login_selector"
+                android:text="确定"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

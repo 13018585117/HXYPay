@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout" />
+
+    <ScrollView
+        android:id="@+id/svid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:id="@+id/ll_addCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/add"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="添加信用卡"
+                        android:textSize="22sp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#FF0000"
+                        />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/card_layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:visibility="visible"
+                    android:background="@drawable/card_shape_bg">
+
+                    <ImageView
+                        android:id="@+id/img_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY" />
+
+                    <LinearLayout
+                        android:layout_width="389dp"
+                        android:layout_height="124dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/bank_logo_img_1"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+
+                            <TextView
+                                android:id="@+id/bank_name_tx_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="1"
+                                android:text="中国银行"
+                                android:textColor="#ffffff"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/update_tx_1"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:gravity="center|right"
+                                android:text="更改"
+                                android:textColor="#ffffff"
+                                android:textSize="16sp"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/bank_logo_img1_1"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                android:id="@+id/bank_type_tx_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_weight="1"
+                                android:text="信用卡"
+                                android:textColor="#ffffff"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/bank_card_tx_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="1"
+                                android:text="**** **** **** ****"
+                                android:textColor="#ffffff"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/c_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/changes" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/redarrow" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/card_layout"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/card_shape_bg"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/bank_logo_img"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:id="@+id/bank_name_tx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:text="中国银行"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/update_tx"
+                            android:layout_width="80dp"
+                            android:layout_height="30dp"
+                            android:gravity="center|right"
+                            android:text="更改"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/bank_logo_img1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/bank_type_tx"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_weight="1"
+                            android:text="信用卡"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/bank_card_tx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
+                            android:text="**** **** **** ****"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="3dp"
+                        android:text="通道选择"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/provice_tondao_tx"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择通道"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/row" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_provice_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="3dp"
+                        android:text="商户地区"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/provice_city_tx"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择商户地区"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/row" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_shouxf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:layout_marginRight="20dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="手续费: "
+                        android:textSize="18sp"
+                        android:textColor="@color/text_333333_color"
+                        />
+                    <TextView
+                        android:id="@+id/tv_shouxf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="@color/text_e72b2a_color"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(元)"
+                        android:textSize="18sp"
+                        android:textColor="@color/text_333333_color"
+                        />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/amout_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:hint="请输入转账金额"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true" />
+
+                <Button
+                    android:id="@+id/btn_com"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/corner_btn_login_selector"
+                    android:text="确定"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="预计将会2小时到账"
+                    android:textColor="#555555"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+</LinearLayout>

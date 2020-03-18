@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标题："
+            android:layout_marginLeft="15dp"
+            android:textColor="#000"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:id="@+id/tv_title_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好像"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/app_theme_color"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="内容："
+            android:layout_marginLeft="15dp"
+            android:textColor="#000"
+            android:textSize="15sp"
+            />
+    <TextView
+        android:id="@+id/tv_content_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:textColor="#333333"
+        android:paddingRight="15dp"
+        android:text="asdfdasfsdfdsfsd fsdfs"
+        android:textSize="14sp"
+        />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_date_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/app_theme_color"
+        android:text="2019-10-01 16:20"
+        android:gravity="right"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/xuxian"
+        />
+
+</LinearLayout>

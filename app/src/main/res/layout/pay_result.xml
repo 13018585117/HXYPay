@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/bg_color"
+	android:orientation="vertical">
+
+	<include layout="@layout/head_layout" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#ffffff"
+		android:gravity="center"
+		android:orientation="vertical"
+		android:padding="20dp">
+
+		<ImageView
+			android:id="@+id/hk_state_img"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+
+		<TextView
+			android:id="@+id/hk_state_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:text=""
+			android:textColor="@color/text_333333_color"
+			android:textSize="18sp" />
+
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/btn_ok"
+		android:layout_width="match_parent"
+		android:layout_height="45dp"
+		android:layout_margin="20dp"
+		android:background="@drawable/corner_btn_login_selector"
+		android:text="确定"
+		android:textColor="#ffffff"
+		android:textSize="18sp" />
+
+</LinearLayout>

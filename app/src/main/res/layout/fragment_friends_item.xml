@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_layout_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_name_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_333333_color"
+                    />
+                <TextView
+                    android:id="@+id/time_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#666666"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tele_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_333333_color"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/call" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView style="@style/line_horizontal" />
+    </LinearLayout>
+
+</LinearLayout>

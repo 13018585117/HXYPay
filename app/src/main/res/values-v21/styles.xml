@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <style name="MyBarfull_screen" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/ww</item>
+        <item name="android:windowFullscreen">true</item>
+
+    </style>
+</resources>

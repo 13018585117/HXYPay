@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout" />
+
+    <com.zhouwei.mzbanner.MZBannerView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:canLoop="true"
+        app:indicatorAlign="center"
+        app:indicatorPaddingLeft="10dp"
+        app:open_mz_mode="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/credit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_layout_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="信用卡申请"
+                android:textColor="@color/text_333333_color"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/row" />
+
+        </LinearLayout>
+
+        <TextView style="@style/line_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/dk_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_layout_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="网络贷款"
+                android:textColor="@color/text_333333_color"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/row" />
+
+        </LinearLayout>
+
+        <TextView style="@style/line_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/card_cp_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_layout_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="卡测评"
+                android:textColor="@color/text_333333_color"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/row" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

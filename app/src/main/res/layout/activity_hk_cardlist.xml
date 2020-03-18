@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.hxypay.view.ListViewForScrollView
+                android:id="@+id/list_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:divider="#00000000"
+                android:dividerHeight="0dp"
+                android:fadingEdge="none"
+                android:listSelector="#00000000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f4f4f4"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:src="@drawable/jisuan"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="周转金计算"
+                    android:textColor="#434242"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="设置还款金额"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/money_tx"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/card_shape_bg1"
+                        android:gravity="center"
+                        android:text="10000"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="拨动指针选择金额"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.hxypay.customview.DialTableView
+                        android:id="@+id/zp_view"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:background="#ffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="每日还款次数"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/count_btn"
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/card_shape_bg1"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="次"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="选择还款天数"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/day_btn"
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/card_shape_bg1"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="天"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/zzj_tx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="@color/text_333333_color"
+                            android:textSize="16sp" />
+
+                        <TextView style="@style/line_horizontal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="周转金"
+                            android:textColor="@color/text_333333_color"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fee_tx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="@color/text_333333_color"
+                            android:textSize="16sp" />
+
+                        <TextView style="@style/line_horizontal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="手续费（元）"
+                            android:textColor="@color/text_333333_color"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/xuxian"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="13dp"
+                    android:layout_marginRight="15dp"
+                    />
+                <LinearLayout
+                    android:id="@+id/ll_vipMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal"
+                    >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textColor="#333333"
+                    android:text="您当前等级为会员，已为您省下手续费："
+                    />
+                    <TextView
+                        android:id="@+id/tv_vipMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="#fa3e3e"
+                        android:text="￥33元"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_hhrMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="#333333"
+                        android:text="升级为合伙人，再减手续费："
+                        />
+                    <TextView
+                        android:id="@+id/tv_hhrMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="#fa3e3e"
+                        android:text="￥33元"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_svipMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="13dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="#333333"
+                        android:text="单卡按年计算："
+                        />
+                    <TextView
+                        android:id="@+id/tv_svipMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="#fa3e3e"
+                        android:text="26.49 X 12月 = 省 311.88元"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/addcard_layout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/corner_btn_login_selector"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/addcard" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="添加信用卡"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#333333</color>
+
+    <color name="bg_color">#f1f0f8</color>
+    <color name="text_333333_color">#333333</color>
+
+    <color name="text_bbbbbb_color">#bbbbbb</color>
+    <color name="layout_bg_gray">#f6f6f6</color>
+
+    <!--<color name="text_e72b2a_color">#e72b2a</color>-->
+    <color name="text_e72b2a_color">#f49000</color>
+    <color name="bg_layout_color">#FFFFFF</color>
+    <color name="app_theme_color">#f49000</color>
+
+    <color name="fellow_business_odd">#47d9fe</color>
+    <color name="fellow_business_even">#fdcb46</color>
+</resources>

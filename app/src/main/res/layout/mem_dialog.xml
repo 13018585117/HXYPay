@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mem"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/close_layout"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:gravity="center|right"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cancel" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/new_content_bg"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/content_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11111111111111111111"
+                android:textColor="@color/text_333333_color"
+                android:textSize="15sp" />
+
+        </ScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <Button android:id="@+id/back"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/mem_back_normal"
+                android:text="返回"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button android:id="@+id/sj"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/mem_sj_normal"
+                android:text="升级会员"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

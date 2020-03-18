@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/bank_logo_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/bank_name_tx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="中国银行"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/update_tx"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:gravity="center|right"
+                    android:text="更改"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bank_card_tx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="**** **** **** ****"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="账单日:"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/tv_billDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="还款日:"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                <TextView
+                    android:id="@+id/tv_repaymentDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/repaymentamount"
+                        android:drawablePadding="3dp"
+                        android:text="还款金额"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/money_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:background="@null"
+                        android:hint="请输入还款金额"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <TextView style="@style/line_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/date"
+                        android:drawablePadding="3dp"
+                        android:text="开始日期"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_start_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择还款开始日期"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/row" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/line_horizontal"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/date"
+                        android:drawablePadding="3dp"
+                        android:text="还款日期"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_end_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择还款日期"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/row" />
+                </LinearLayout>
+
+                <TextView style="@style/line_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/time"
+                        android:drawablePadding="3dp"
+                        android:text="消费次数"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/count_tx"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择消费次数"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/row" />
+                </LinearLayout>
+
+                <TextView style="@style/line_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/merchantareas"
+                        android:drawablePadding="3dp"
+                        android:text="商户地区"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/provice_city_tx"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择商户地区"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/row" />
+                </LinearLayout>
+
+                <TextView style="@style/line_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/merchant"
+                        android:drawablePadding="3dp"
+                        android:text="消费商户"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/mcc_tx"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择消费商户"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/row" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_com"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/corner_btn_login_selector"
+                android:text="预览计划"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

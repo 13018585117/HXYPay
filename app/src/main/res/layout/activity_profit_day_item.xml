@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_layout_selector"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tele_tx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textColor="@color/text_333333_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/money_tx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textColor="@color/text_333333_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/time_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingLeft="10dp"
+                android:textColor="@color/text_333333_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <TextView style="@style/line_horizontal" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="@drawable/new_head_bg"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/return_layout"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:gravity="center|left"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_back_r" />
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                />
+            <LinearLayout
+                android:id="@+id/close_layout"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:gravity="center|right"
+                android:orientation="horizontal"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cancel" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_headTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:text="公告信息"
+            android:textColor="#ffffff"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:src="@drawable/xuxian"
+        android:background="@color/bg_layout_color"
+        />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+      >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+                <LinearLayout
+                    android:id="@+id/ll_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/content_tx"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="11111111111111111111"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2019-10"
+                        android:textSize="13sp"
+
+                        android:textColor="@color/app_theme_color"
+                        android:gravity="right"
+                        />
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/lv_content"
+                    android:layout_width="match_parent"
+                    android:divider="@null"
+                    android:listSelector="#f4f4f4"
+                    android:visibility="gone"
+                    android:layout_height="280dp"/>
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

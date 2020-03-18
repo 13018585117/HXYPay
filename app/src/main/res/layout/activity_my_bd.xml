@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="承包单位："
+                            android:textColor="#555555"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/cbdw_tx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#555555"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="保险单："
+                            android:textColor="#555555"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/bxd_tx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#555555"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="个人账户资金安全保险"
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bz" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="被保人："
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/bbr_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#555555"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="保障范围："
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/bzfw_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#555555"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="保障金额："
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/bzje_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#555555"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="保险时效："
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/bxsx_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#555555"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="开始日期："
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/ksrq_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#555555"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="已保障天数："
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/ybzts_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#555555"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="查询电话："
+                        android:textColor="@color/text_333333_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/cxdh_tx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#555555"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_com"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/corner_btn_login_selector"
+                android:text="确认"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

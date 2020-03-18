@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hxypay">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!--百度地图-->
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions"></uses-permission>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!--腾讯Bug-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!--android:theme="@style/AppTheme.NoActionBar"-->
+    <application
+        android:name="com.hxypay.App"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:largeHeap="true"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/app_logo"
+        android:supportsRtl="true"
+        tools:replace="android:icon"
+        android:theme="@style/AppTheme"
+        >
+        <!-- Since JCore2.0.0 Required SDK核心功能-->
+        <!-- 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false -->
+        <!-- 这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定 -->
+        <service android:name="com.hxypay.services.XService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+        <!-- Required since 3.0.7 -->
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 3.3.0开始所有事件将通过该类回调 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name="com.hxypay.broadcasts.JiGuanReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.hxypay" />
+            </intent-filter>
+        </receiver>
+
+        <!--百度地图-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="Gonrcw2Fo4MOqSUMq4clgiLQzgf0FHHX" >
+        </meta-data>
+
+        <!-- 适配全面屏 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 适配华为(hua wei)刘海屏 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 适配小米(xiao mi)刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.hxypay.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name="com.hxypay.ui.WelcomeActivity"
+            android:theme="@style/MyBarfull_screen"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.hxypay.tab.OTabActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.LoginActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.RegiestActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.ForgetPwdActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.SettingActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.AboutUsActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.FeedBackActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.UpdatePwdActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.CardTestOCRInfoActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.RealNameActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.RealNameOCRActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.RealNameOCRInfoActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.ServerMainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.FriendsActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+
+        <activity
+            android:name="com.hxypay.ui.MyBDActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.ServerActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.HomeActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.CardBagActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.UpdateCardOCRActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.UpdateCardOCRInfoActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.CardAddActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            />
+        <activity
+            android:name="com.hxypay.ui.CardAddOcrActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.CardAddOcrInfoActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.CardUpdateActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.FastPayActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.FastPayAllCardActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.UpdatePhoneActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.UpdatePhoneOKActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.UpdatePayPwdActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.CardTestOCRActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.KaCePing_head_Activity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.KaCePing_JiLu_Activity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.WBViewActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.LongGraphWBViewActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.QQWBViewActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.FastPayWBViewActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.H5Activity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.CardMgrActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.CardMgrActivity_Backup"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.ShareActivity2"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.ShareMaterialActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.ShareActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name=".PhotoShow.PhotoViewActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.RegiestProActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.NewsActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.SJActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+
+        <activity
+            android:name="com.hxypay.ui.MineActivity2"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.HKCardListActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.TradeBillActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.NewHandActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.HKChannelActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.ProfitActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.ProfitDayActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.BillActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.IntegralBusActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.BusSelectProductActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.BusCommodityDetailActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.BusOrderFormActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.FellowBusinessActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.FellowBusinessDetailedDataActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.TradeBillDetailActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.BillDetailActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.TXActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.HKPlainXEActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.HKPlainDEActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hxypay.ui.HKPlainPreviewActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.MoreActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.MoreZBActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.HKPlainOkActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity
+            android:name="com.hxypay.ui.MemBerSJActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.Transparent"
+            />
+        <activity android:name="me.zhouzhuo810.cameracardcrop.CropActivity"
+
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
+
+        <!--  <activity android:name=".wxapi.WXPayEntryActivity"
+              android:exported="true"
+              android:launchMode="singleTop"
+              android:screenOrientation="portrait" />
+              />
+  -->
+
+
+
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote"> </service>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg_gray"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/head_layout" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f4f4f4"
+        />
+    <ListView
+        android:id="@+id/lv_newHand"
+        android:layout_width="match_parent"
+        android:divider="#f4f4f4"
+        android:paddingBottom="15dp"
+        android:listSelector="@color/transparent"
+        android:layout_height="match_parent"></ListView>
+
+</LinearLayout>

@@ -1,0 +1,158 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\Administrator\\Desktop\\好信用管家签名\\hxy.jks')
+            storePassword 'aa123456'
+            keyAlias = 'hxy'
+            keyPassword 'aa123456'
+        }
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        //添加到此处
+        multiDexEnabled true
+        applicationId "com.hxypay"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 15
+        versionName "1.5.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi' , 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "2e5e15d0c97cc67c7127f24d", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets{
+        main{
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []    //disable automatic ndk-build
+        }
+    }
+}
+
+MobSDK {
+    appKey "2c651b7097762"
+    appSecret "adaf68f34b45a98e9567897109f2d3a3"
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            Wechat {
+                SortId = "1"
+                appId "wxf3f05a3095372602"
+                appSecret "205497f6d1d225175d604f55864d5fcb"
+                BypassApproval = "false"
+            }
+            WechatMoments {
+                SortId = "2"
+                appId "wxf3f05a3095372602"
+                appSecret "205497f6d1d225175d604f55864d5fcb"
+                BypassApproval = "false"
+            }
+//            QQ {
+//                SortId = "3"
+//                appId "1107943823"
+//                appKey "IXnddQiOvdur5pJ2"
+//                shareByAppClient true
+//                BypassApproval = "false"
+//            }
+//            QZone {
+//                SortId = "4"
+//                appId "1107943823"
+//                appKey "IXnddQiOvdur5pJ2"
+//                shareByAppClient true
+//                BypassApproval = "false"
+//            }
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:design:28.0.0-beta01'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(':okhttputils')
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    //    implementation 'com.google.zxing:core:3.3.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
+    implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
+    implementation files('libs/alipaySdk-20180601.jar')
+    implementation 'com.alibaba:fastjson:1.2.55'
+    // For developers using the Android Support Library
+    implementation 'pub.devrel:easypermissions:2.0.1'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.3.4'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    /*拍照的*/
+    /*拍照的*/
+    implementation 'com.github.wildma:IDCardCamera:1.1.0'
+    implementation 'me.zhouzhuo810.cameracardcrop:camera-card-crop:1.0.5'
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+    // 基础依赖包，必须要依赖
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    // core
+    implementation 'com.liulishuo.okdownload:okdownload:1.0.5'
+    // provide sqlite to store breakpoints
+    implementation 'com.liulishuo.okdownload:sqlite:1.0.5'
+    // provide okhttp to connect to backend
+    // and then please import okhttp dependencies by yourself
+    implementation 'com.liulishuo.okdownload:okhttp:1.0.5'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+    implementation 'cn.yipianfengye.android:zxing-library:2.2'
+    //二维码框架；
+    //极光推送；
+    implementation 'cn.jiguang.sdk:jpush:3.3.2'
+    // 此处以JPush 3.3.2 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.0.1'
+    // 此处以JCore 2.0.1 版本为例。
+    //    implementation 'com.sunfusheng:MarqueeView:1.4.1'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation files('libs/tbs_sdk_thirdapp_v3.6.0.1310_43612_sharewithdownload_withoutGame_obfs_20180706_163319.jar')
+
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    //数字滚动
+    implementation 'com.github.newcaoguo:EasyRollingNumber:1.0'
+
+    //1.1.0 （1.0.5及以前版本的老用户升级需谨慎，API改动过大） 刷新；
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-28'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-28'//没有使用特殊Header，可以不加这行
+    implementation 'com.android.support:appcompat-v7:28.0.0'//版本 23以上（必须）
+
+    /*侧滑就选智能侧滑，弹性侧滑、滑动抽屉、下拉刷新、侧滑返回以及侧滑删除等你想到和没想到的，通通搞定*/
+    implementation 'com.billy.android:smart-swipe:1.0.8'
+    implementation 'com.billy.android:smart-swipe-support:1.0.0'
+
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+
+}

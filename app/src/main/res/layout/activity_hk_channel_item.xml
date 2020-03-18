@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    >
+    <LinearLayout
+        android:id="@+id/ll_bg"
+        android:layout_width="match_parent"
+        android:background="@drawable/qudao1"
+        android:layout_height="180dp"
+        android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_margin="15dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/channel_name_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:text=""
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            />
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="29dp"
+            android:src="@drawable/qudaojiantou"/>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

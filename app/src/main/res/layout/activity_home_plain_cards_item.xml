@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/bank_logo_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:id="@+id/bank_name_tx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="中国银行"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                <ImageView
+                    android:id="@+id/iv_hk_errer"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:src="@drawable/znhk_tixing"
+                    />
+
+                <TextView
+                    android:id="@+id/update_tx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ld"
+                    android:gravity="center|right"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bank_card_tx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="**** **** **** ****"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/zd_hk_tx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

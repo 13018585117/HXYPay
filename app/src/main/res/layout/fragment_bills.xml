@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.hxypay.pulltorefresh.PullToRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/layout_pulltorefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/list_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="#00000000"
+                android:dividerHeight="0dp"
+                android:fadingEdge="none"
+                android:listSelector="@drawable/bg_layout_selector" />
+
+        </com.hxypay.pulltorefresh.PullToRefreshLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

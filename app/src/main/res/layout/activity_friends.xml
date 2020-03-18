@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/head_layout" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/layout_bg_gray"
+        />
+
+<!--    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已邀请好友"
+                android:textColor="@color/text_333333_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/number_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="0"
+                android:textColor="@color/text_333333_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已激活好友"
+                android:textColor="@color/text_333333_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/activation_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="0"
+                android:textColor="@color/text_333333_color"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可用激活码"
+                android:textColor="@color/text_333333_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/code_number_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="0"
+                android:textColor="@color/text_333333_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>-->
+
+    <android.support.design.widget.TabLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/home_viewpager_tab"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:tabIndicatorColor="@color/text_e72b2a_color"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/text_e72b2a_color"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="@color/text_333333_color" />
+
+    <TextView style="@style/line_horizontal" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff" />
+</LinearLayout>
